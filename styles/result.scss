@@ -1,0 +1,33 @@
+body{
+    font-family: 'Roboto Regular', sans-serif;
+    .container{
+        color: #121212;
+        width: 80%;
+        margin: auto;
+        border-radius: 10px;
+        border: #ddd solid 1px;
+        margin-top: 10%;
+        padding: 10px;
+        box-shadow: 2px 2px 20px #999;
+        .title{
+            font-family: 'Roboto Black', sans-serif;
+            font-size: 2rem;
+            text-align: center;
+            border-bottom: #ddd solid 1px;
+            padding-bottom: 5px;
+            color: #222;
+        }
+        .paragraph{
+            width: 80%;
+            margin: auto;
+            p{
+                font-size: 1.1rem;
+                // color: #121212;
+                span{
+                    text-transform: capitalize;
+                    // color: #0059ff;
+                }
+            }
+        }
+    }
+}

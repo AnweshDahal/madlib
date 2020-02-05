@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./styles/form.css">
+    <title>Occupations</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Occupations</h1>
+        <form>
+            <div class="block">
+                <!-- Ron Gib -->
+                <label for="item1">Person's Name:</label>
+                <input type="text" name="personname" id="item1" class="text-feild" required>
+            </div>
+            <div class="block">
+                <!-- Successful -->
+                <label for="item2">Adjactive:</label>
+                <input type="text" name="adj1" id="item2" class="text-feild" required>
+            </div>
+            <div class="block">
+                <!-- journalist -->
+                <label for="item3">Occupation:</label>
+                <input type="text" name="occupation" id="item3" class="text-feild" required>
+            </div>
+            <div class="block">
+                <!-- pays -->
+                <label for="item4">Verb (ending with -s):</label>
+                <input type="text" name="verbS" id="item4" class="text-feild" required>
+            </div>
+            <div class="block">
+                <!-- salary -->
+                <label for="item5">Noun:</label>
+                <input type="text" name="noun2" id="item5" class="text-feild" required>
+            </div>
+            <div class="block">
+                <!-- publish -->
+                <label for="item6">Verb:</label>
+                <input type="text" name="verb" id="item6" class="text-feild" required>
+            </div>
+            <div class="block">
+                <!-- articles -->
+                <label for="item7">Noun:</label>
+                <input type="text" name="noun3" id="item7" class="text-feild" required>
+            </div>
+            <div class="block">
+                <!-- send -->
+                <label for="item8">Verb:</label>
+                <input type="text" name="verb2" id="item8" class="text-feild" required>
+            </div>
+            <div class="block">
+                <!-- world -->
+                <label for="item9">Noun:</label>
+                <input type="text" name="noun4" id="item9" class="text-feild" required>
+            </div>
+            <div class="block">
+                <!-- ask -->
+                <label for="item10">Verb:</label>
+                <input type="text" name="verb3" id="item10" class="text-feild" required>
+            </div>
+            <div class="block">
+                <!-- world -->
+                <label for="item11">Noun:</label>
+                <input type="text" name="noun4" id="item11" class="text-feild" required>
+            </div>
+            <div class="block">
+                <!-- ask -->
+                <label for="item12">Verb:</label>
+                <input type="text" name="verb3" id="item12" class="text-feild" required>
+            </div>
+            <div class="block">
+                <!-- cover -->
+                <label for="item13">Verb:</label>
+                <input type="text" name="verb4" id="item13" class="text-feild" required>
+            </div>
+            <div class="block">
+                <!-- major -->
+                <label for="item14">Adjective:</label>
+                <input type="text" name="adj2" id="item14" class="text-feild" required>
+            </div>
+            <div class="block">
+                <!-- covering -->
+                <label for="item15">Verb(ending with -ing):</label>
+                <input type="text" name="verb5" id="item15" class="text-feild" required>
+            </div>
+            <div class="block">
+                <!-- big -->
+                <label for="item16">Adjective:</label>
+                <input type="text" name="adj3" id="item16" class="text-feild" required>
+            </div>
+            <div class="block">
+                <!-- demonstrations -->
+                <label for="item17">Noun:</label>
+                <input type="text" name="noun5" id="item17" class="text-feild" required>
+            </div>
+            <div class="block">
+                <!-- demonstrator -->
+                <label for="item18">Noun:</label>
+                <input type="text" name="noun6" id="item18" class="text-feild" required>
+            </div>
+            <div class="block">
+                <!-- arrest -->
+                <label for="item19">Verb:</label>
+                <input type="text" name="verb6" id="item19" class="text-feild" required>
+            </div>
+            <div class="block">
+                <button type='submit' id="submit">Go</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        const electron = require('electron')
+        const {ipcRenderer} = electron;
+        const customTitlebar = require('custom-electron-titlebar');
+
+        new customTitlebar.Titlebar({
+            backgroundColor: customTitlebar.Color.fromHex('#000'),
+            shadow: true,
+            icon: './icons/icon.svg'
+        });
+        
+        const form = document.querySelector('form');
+        form.addEventListener('submit', submitForm);
+        function submitForm(e){
+            e.preventDefault();
+            var valueList = [
+                form.querySelector('#item1').value, 
+                form.querySelector('#item2').value,
+                form.querySelector('#item3').value,
+                form.querySelector('#item4').value,
+                form.querySelector('#item5').value,
+                form.querySelector('#item6').value,
+                form.querySelector('#item7').value,
+                form.querySelector('#item8').value,
+                form.querySelector('#item9').value,
+                form.querySelector('#item10').value,
+                form.querySelector('#item11').value,
+                form.querySelector('#item12').value,
+                form.querySelector('#item13').value,
+                form.querySelector('#item14').value,
+                form.querySelector('#item15').value,
+                form.querySelector('#item16').value,
+                form.querySelector('#item17').value,
+                form.querySelector('#item18').value,
+                form.querySelector('#item19').value,
+            ];
+            ipcRenderer.send('blankvalues', valueList, 'occupation.html');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+*Main Window: list of the available paragraphs
+	**header
+		**logo
+	**main
+		**list
+			**hyperlint 
+	**nav
+		**hyperlinks
+*Form Window: fill the words in the designated feilds
+*Result Window: display the result

@@ -1,0 +1,94 @@
+@font-face {
+  font-family: 'Roboto Regular';
+  src: url(../fonts/Roboto-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'Roboto Black';
+  src: url(../fonts/Roboto-Black.ttf);
+}
+
+@font-face {
+  font-family: 'Roboto Bold';
+  src: url(../fonts/Roboto-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'Roboto Medium';
+  src: url(../fonts/Roboto-Medium.ttf);
+}
+
+@font-face {
+  font-family: 'Roboto Thin';
+  src: url(../fonts/Roboto-Thin.ttf);
+}
+
+@font-face {
+  font-family: 'Roboto Light';
+  src: url(../fonts/Roboto-Thin.ttf);
+}
+
+body {
+  padding: 10px;
+  width: 100%;
+  font-family: 'Roboto Regular', sans-serif;
+  border-radius: 15px;
+}
+
+body .container {
+  width: 50%;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 15px;
+  border: #ddd solid 1px;
+  -webkit-box-shadow: 2px 2px 20px #999;
+          box-shadow: 2px 2px 20px #999;
+}
+
+body .container h1 {
+  text-align: center;
+}
+
+body .container form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .container form .block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .container form .block label, body .container form .block .text-feild {
+  width: 50%;
+  padding: 5px;
+  margin: 5px;
+}
+
+body .container form .block label {
+  text-align: right;
+}
+
+body .container form .block .text-feild {
+  border: #002f6d solid 1px;
+  border-radius: 2px;
+}
+
+body .container form .block button {
+  width: 50%;
+  margin: auto;
+  background-color: #008cff;
+  padding: 10px;
+  font-size: 1.5rem;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+/*# sourceMappingURL=form.css.map */

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles/result.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            Occupations
+        </div>
+        <div class="paragraph">
+            <p>
+                <span id="item1"></span> is a <span id="item2"></span>
+                <span id="item3"></span>. His employers <span id="item4"></span>
+                him a huge <span id="item5"></span>, and they <span id="item6"></span>
+                all his <span id="item7"></span>. They <span id="item8"></span>
+                him all over over the <span id="item9"></span>,
+                and <span id="item10"></span> him to <span id="item11"></span>
+                <span id="item12"></span> events. 
+                'Only I don't like <span id="item13"></span>
+                <span id="item14"></span> <span id="item15"></span> <span id="item16"></span>
+                ' he says. 'Sometimes the police mistake me for a <span id="item17"></span> 
+                and <span id="item18"></span>  me.'
+            </p>
+        </div>
+    </div>
+    <script>
+        const electron = require('electron');
+        const {ipcRenderer} = electron;
+        const customTitlebar = require('custom-electron-titlebar');
+        new customTitlebar.Titlebar({
+            backgroundColor: customTitlebar.Color.fromHex('#000'),
+            shadow: true,
+            icon: './icons/icon.svg'
+        });
+        
+        ipcRenderer.on('blankValues', function (e, item) {
+            for(k = 0; k < item.length; k++){
+                console.log(item[k]);
+            }
+            document.querySelector("#item1").innerHTML = item[0];
+            document.querySelector("#item2").innerHTML = item[1];
+            document.querySelector("#item3").innerHTML = item[2];
+            document.querySelector("#item4").innerHTML = item[3];
+            document.querySelector("#item5").innerHTML = item[4];
+            document.querySelector("#item6").innerHTML = item[5];
+            document.querySelector("#item7").innerHTML = item[6];
+            document.querySelector("#item8").innerHTML = item[7];
+            document.querySelector("#item9").innerHTML = item[8];
+            document.querySelector("#item10").innerHTML = item[9];
+            document.querySelector("#item11").innerHTML = item[10];
+            document.querySelector("#item12").innerHTML = item[11];
+            document.querySelector("#item13").innerHTML = item[12];
+            document.querySelector("#item14").innerHTML = item[13];
+            document.querySelector("#item15").innerHTML = item[14];
+            document.querySelector("#item16").innerHTML = item[15];
+            document.querySelector("#item17").innerHTML = item[16];
+            document.querySelector("#item18").innerHTML = item[17];
+        });
+    </script>
+</body>
+</html>
